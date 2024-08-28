@@ -138,4 +138,12 @@ int main() {
   calcularPromedioEdad(head);
   cout << "\n";
   calcularIMC(head);
+
+  // recorre la lista enlazada desde la cabeza hasta el final limpiandola
+  while (head != nullptr) {
+    Paciente *temp = head;
+    head = head->siguiente;
+    delete temp;
+  }
+  return 0;
 }
